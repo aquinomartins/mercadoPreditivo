@@ -40,7 +40,7 @@ function e(string $value): string
     return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
 
-function get_current_user(PDO $pdo): ?array
+function get_current_user_data(PDO $pdo): ?array
 {
     if (empty($_SESSION['user_id'])) {
         return null;
