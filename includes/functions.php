@@ -63,8 +63,8 @@ function calculate_prices(array $market): array
         return ['yes' => 0.5, 'no' => 0.5];
     }
 
-    $priceYes = $liquidityNo / $total;
-    $priceNo = $liquidityYes / $total;
+    $priceYes = $liquidityYes / $total;
+    $priceNo = $liquidityNo / $total;
 
     return ['yes' => $priceYes, 'no' => $priceNo];
 }
