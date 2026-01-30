@@ -6,7 +6,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/functions.php';
 
-$user = get_current_user($pdo);
+$user = get_current_user_data($pdo);
 
 $stmt = $pdo->query('SELECT * FROM markets ORDER BY close_at ASC');
 $markets = $stmt->fetchAll();

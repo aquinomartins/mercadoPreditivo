@@ -8,7 +8,7 @@ require_once __DIR__ . '/../includes/functions.php';
 
 require_login();
 
-$user = get_current_user($pdo);
+$user = get_current_user_data($pdo);
 
 $stmt = $pdo->prepare('SELECT t.*, m.title FROM transactions t LEFT JOIN markets m ON m.id = t.market_id WHERE t.user_id = ? ORDER BY t.created_at DESC');
 $stmt->execute([$user['id']]);

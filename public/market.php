@@ -18,7 +18,7 @@ if (!$market) {
     exit;
 }
 
-$user = get_current_user($pdo);
+$user = get_current_user_data($pdo);
 $prices = calculate_prices($market);
 ?>
 <!DOCTYPE html>
